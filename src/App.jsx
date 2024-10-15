@@ -1,23 +1,23 @@
 // src/App.js
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MenuBar from './MenuBar';
-import Home from './Home';
+ import Home from './Home';
 import About from './About';
 import Services from './Services';
 import Contact from './Contact';
-import NotFound from './NotFound'; // Create this component
+import NotFound from './NotFound'; 
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import Layout from './Layout/Layout';
 const App = () => {  
   return (
     <Router>
       <div>
-        <MenuBar />
+       
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} /> {/* Fallback for unmatched routes */}
+          <Route path="/" element={ <Layout ><Home /></Layout>} />
+          <Route path="/about" element={<Layout ><About /></Layout>} />
+          <Route path="/services" element={<Layout ><Services /></Layout>} />
+          <Route path="/contact" element={<Layout ><Contact /></Layout>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
     </Router>
