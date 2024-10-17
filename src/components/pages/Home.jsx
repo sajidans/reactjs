@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import firstImage from "./assets/banner-1.jpg";
-import secondImage from "./assets/banner-2.jpg";
-import thirdImage from "./assets/banner-3.png";
+import firstImage from "../../assets/banner-1.jpg";
+import secondImage from "../../assets/banner-2.jpg";
+import thirdImage from "../../assets/banner-3.png";
 
 export default function Home() {
   return (
