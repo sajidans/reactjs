@@ -18,7 +18,7 @@ const Category = () => {
     }, []);
 
     return (
-        <ul className='category' >
+        <ul className='category' key="1">
             {users.map(user => (
 
                 <>
